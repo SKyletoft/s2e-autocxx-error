@@ -1,0 +1,79 @@
+TARGET = Some("x86_64-unknown-linux-gnu")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-unknown-linux-gnu")
+cargo:rerun-if-env-changed=CXX_x86_64-unknown-linux-gnu
+CXX_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CXX_x86_64_unknown_linux_gnu
+CXX_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CXX
+HOST_CXX = None
+cargo:rerun-if-env-changed=CXX
+CXX = Some("g++")
+cargo:rerun-if-env-changed=CXXFLAGS_x86_64-unknown-linux-gnu
+CXXFLAGS_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CXXFLAGS_x86_64_unknown_linux_gnu
+CXXFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CXXFLAGS
+HOST_CXXFLAGS = None
+cargo:rerun-if-env-changed=CXXFLAGS
+CXXFLAGS = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some("true")
+CARGO_CFG_TARGET_FEATURE = Some("adx,aes,avx,avx2,bmi1,bmi2,fma,fxsr,lzcnt,pclmulqdq,popcnt,rdrand,rdseed,sse,sse2,sse3,sse4.1,sse4.2,ssse3,xsave,xsavec,xsaveopt,xsaves")
+cargo:rerun-if-env-changed=CXX_x86_64-unknown-linux-gnu
+CXX_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CXX_x86_64_unknown_linux_gnu
+CXX_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CXX
+HOST_CXX = None
+cargo:rerun-if-env-changed=CXX
+CXX = Some("g++")
+cargo:rerun-if-env-changed=CXXFLAGS_x86_64-unknown-linux-gnu
+CXXFLAGS_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=CXXFLAGS_x86_64_unknown_linux_gnu
+CXXFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_CXXFLAGS
+HOST_CXXFLAGS = None
+cargo:rerun-if-env-changed=CXXFLAGS
+CXXFLAGS = None
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("adx,aes,avx,avx2,bmi1,bmi2,fma,fxsr,lzcnt,pclmulqdq,popcnt,rdrand,rdseed,sse,sse2,sse3,sse4.1,sse4.2,ssse3,xsave,xsavec,xsaveopt,xsaves")
+running: "g++" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-gdwarf-4" "-fno-omit-frame-pointer" "-m64" "-Wall" "-Wextra" "-std=c++11" "-o" "/home/u3836/git/s2e-autocxx-error/crate/target/debug/build/cxx-1371c2f3903cebd5/out/src/cxx.o" "-c" "src/cxx.cc"
+cargo:warning=In file included from /nix/store/v1nxrwb4ls09sbbrwlkgxs7dlw8paksh-gcc-11.3.0/include/c++/11.3.0/x86_64-unknown-linux-gnu/bits/os_defines.h:39,
+cargo:warning=                 from /nix/store/v1nxrwb4ls09sbbrwlkgxs7dlw8paksh-gcc-11.3.0/include/c++/11.3.0/x86_64-unknown-linux-gnu/bits/c++config.h:586,
+cargo:warning=                 from /nix/store/v1nxrwb4ls09sbbrwlkgxs7dlw8paksh-gcc-11.3.0/include/c++/11.3.0/utility:68,
+cargo:warning=                 from /nix/store/v1nxrwb4ls09sbbrwlkgxs7dlw8paksh-gcc-11.3.0/include/c++/11.3.0/algorithm:60,
+cargo:warning=                 from src/../include/cxx.h:2,
+cargo:warning=                 from src/cxx.cc:1:
+cargo:warning=/nix/store/nasgvbblxi25r6y1s82il4m0m4ghib68-glibc-2.35-224-dev/include/features.h:412:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+cargo:warning=  412 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+cargo:warning=      |    ^~~~~~~
+exit status: 0
+cargo:rerun-if-env-changed=AR_x86_64-unknown-linux-gnu
+AR_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=AR_x86_64_unknown_linux_gnu
+AR_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_AR
+HOST_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some("ar")
+cargo:rerun-if-env-changed=ARFLAGS_x86_64-unknown-linux-gnu
+ARFLAGS_x86_64-unknown-linux-gnu = None
+cargo:rerun-if-env-changed=ARFLAGS_x86_64_unknown_linux_gnu
+ARFLAGS_x86_64_unknown_linux_gnu = None
+cargo:rerun-if-env-changed=HOST_ARFLAGS
+HOST_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+running: "ar" "cq" "/home/u3836/git/s2e-autocxx-error/crate/target/debug/build/cxx-1371c2f3903cebd5/out/libcxxbridge1.a" "/home/u3836/git/s2e-autocxx-error/crate/target/debug/build/cxx-1371c2f3903cebd5/out/src/cxx.o"
+exit status: 0
+running: "ar" "s" "/home/u3836/git/s2e-autocxx-error/crate/target/debug/build/cxx-1371c2f3903cebd5/out/libcxxbridge1.a"
+exit status: 0
+cargo:rustc-link-lib=static=cxxbridge1
+cargo:rustc-link-search=native=/home/u3836/git/s2e-autocxx-error/crate/target/debug/build/cxx-1371c2f3903cebd5/out
+cargo:rerun-if-changed=src/cxx.cc
+cargo:rerun-if-changed=include/cxx.h
+cargo:rustc-cfg=built_with_cargo
+cargo:HEADER=/home/u3836/.cargo/registry/src/github.com-1ecc6299db9ec823/cxx-1.0.91/include/cxx.h
